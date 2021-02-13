@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Result</title>
+  </head>
+
+  <body style="display: flex; justify-content: center; align-items: center">
+    <div style="width: 80%">
+      <h2>점수 : {{score}}</h2>
+      <!-- 여기 띄어쓰기 깐깐하게 본다.. -->
+      <img width="300px" height="300px" src= {% if score == 0 %}
+      "https://item.kakaocdn.net/do/437998cb670b87a9a8faca156155beeb15b3f4e3c2033bfd702a321ec6eda72c"
+      {% elif score == 1 %}
+      "https://item.kakaocdn.net/do/c9230634b95167d3f4c177bb02c9f73d82f3bd8c9735553d03f6f982e10ebe70"
+      {% else %}
+      "https://item.kakaocdn.net/do/a56e6ddd117688df80be93b1154a9856f43ad912ad8dd55b04db6a64cddaf76d"
+      {% endif %}/>
+      <div>
+        {% if a1 %} a1 맞음 {% else %} a1 틀렸음 답은 IT서비스 구축을 위한
+        웹프로그래밍 학습 {% endif %}
+      </div>
+      <div>
+        {% if a2 %} a2 맞음 {% else %} a2 틀렸음 답은 코딩테스트 {% endif %}
+      </div>
+      <a href="/">홈으로</a>
+    </div>
+  </body>
+</html>

@@ -14,6 +14,6 @@ def check_answer(request):
     # 문제 수가 많아진다면 이러한 작업도 반복문 안으로 넣으면 좋을겁니다
     a1 = (request.GET["q1"] == "1")
     a2 = (request.GET["q2"] == "3")
-    # a3 = (request.GET["q3"] == "?") 아직 회장을 몰라서 주석 처리
-    score = a1 + a2
-    return render(request, "result.html", {"a1" : a1, "a2" : a2, "score" : score})
+    a3 = (request.GET["q3"] == "2")
+    score = a1 + a2 + a3
+    return render(request, "result.html", {"a1" : a1, "a2" : a2, "a3" : a3, "score" : score})
